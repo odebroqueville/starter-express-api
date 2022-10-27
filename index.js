@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/:url', (req, res) => {
     console.log("Just got a request!");
-    const url = req.params.url;
+    const url = req.params.url.substring(1);
     console.log(url);
     const title = getTitle(url);
     res.send(title);
