@@ -15,14 +15,13 @@ app.listen(process.env.PORT || 3000);
 // Helper function to get the title of a web page
 async function getTitle(url){
     try {
-        const request = new Request(url, {
+        const options = {
             method: 'GET',
             mode: 'cors',
             headers: {
                 'Content-Type': 'text/html'
-            }
-        });
-        const response = await fetch(request);
+        };
+        const response = await fetch(url, options);
         const html = await response.text();
         let title = '';
         const titleMatches = html.match(/<title.*?>.*?<\/title>/gmi)||[];
