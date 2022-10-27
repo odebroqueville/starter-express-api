@@ -7,7 +7,7 @@ app.get('/', async (req, res) => {
     const url = req.query.url;
     console.log(url);
     const title = await getTitle(url);
-    res.send(url);
+    res.send(title);
 })
 
 app.listen(process.env.PORT || 3000);
