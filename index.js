@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     const url = req.query.url;
     console.log(url);
     const title = getTitle(url);
-    res.send(title);
+    res.send(url);
 })
 
 app.listen(process.env.PORT || 3000);
