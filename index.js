@@ -2,9 +2,9 @@ const fetch = require('node-fetch');
 const express = require('express');
 const app = express();
 
-app.get('/:url', (req, res) => {
+app.get('/:id', (req, res) => {
     console.log("Just got a request!");
-    const url = req.params.url;
+    const url = req.params.id;
     console.log(url);
     const title = getTitle(url);
     res.send(title);
