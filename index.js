@@ -7,6 +7,8 @@ app.get('/', async (req, res) => {
     const url = req.query.url;
     console.log(url);
     const title = await getTitle(url);
+    res.header("Access-Control-Allow-Origin", '*'); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", 'Origin, X-Requested-With, Content-Type, Accept');
     res.send(title);
 })
 
