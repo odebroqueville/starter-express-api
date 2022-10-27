@@ -4,6 +4,7 @@ const app = express();
 app.get('/:url', (req, res) => {
     console.log("Just got a request!");
     const url = req.params.url;
+    console.log(url);
     const title = getTitle(url);
     res.send(title);
 })
