@@ -14,6 +14,6 @@ app.listen(process.env.PORT || 3000);
 
 // Helper function to get the title of a web page
 function getTitle(url){
-    return 'Hellow World!"
+    return 'Hello World!'
 
 }
