@@ -20,6 +20,7 @@ async function getTitle(url){
             mode: 'cors',
             headers: {
                 'Content-Type': 'text/html'
+            }
         };
         const response = await fetch(url, options);
         const html = await response.text();
